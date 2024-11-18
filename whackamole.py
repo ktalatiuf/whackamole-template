@@ -33,13 +33,9 @@ def main():
                 elif event.type == pygame.MOUSEBUTTONDOWN:
                     mouse_x = event.pos[0]
                     mouse_y = event.pos[1]
-                    print(f"Mouse X: {mouse_x //32} and Mouse y {mouse_y//32}")
-                    print(f"Location {location}")
-                    print(f"EQ :{(mouse_x //32 == location[0]) and (mouse_y // 32 == location[1])}")
                     if (mouse_x //32 == location[0]) and (mouse_y // 32 == location[1]):
                         random_range1 = (random.randrange(0, 480)//32) *32
                         random_range2 = (random.randrange(0, 608)//32)*32
-                        print(f"Random 1: {random_range1} and random 2: {random_range2}")
                         location = (random_range2//32),(random_range1//32)
 
     finally:
